@@ -19,8 +19,7 @@ def set_background(image_path):
         unsafe_allow_html=True
     )
 
-# Set background image (Replace 'background.jpg' with your image file path)
-set_background("bg2.webp")
+set_background("bg.webp")
 
 st.markdown("""
             
@@ -79,9 +78,6 @@ st.markdown("""
 st.markdown('<div class="glass-container">', unsafe_allow_html=True)
 st.markdown("<div class='title'>🚀🔄 Advanced Unit Converter 🚀</div>", unsafe_allow_html=True)
 
-# Add unit categories and conversion logic here (same as your existing code)
-
-
 categories = {
     "🌐Area": ["Square Meters", "Square Kilometers", "Square Feet", "Square Miles", "Acres", "Hectares"],
     "📊Data Transfer Rate": ["Bits per Second", "Kilobits per Second", "Megabits per Second", "Gigabits per Second", "Terabits per Second"],
@@ -102,10 +98,8 @@ categories = {
 
 selected_category = st.selectbox("Select Category", list(categories.keys()))
 
-# Input for value to convert
 value = st.number_input("Enter Value", min_value=0.0, value=1.0)
 
-# Dropdowns for selecting 'from' and 'to' units
 from_unit = st.selectbox("From Unit", categories[selected_category])
 to_unit = st.selectbox("To Unit", categories[selected_category])
 
